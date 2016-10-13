@@ -2,7 +2,6 @@
 /**
  * Exemplo de configuração do WHMCS para exemplificar a inserção da variável $autoauthkey
  */
- 
 $license = 'Leased-xxxxxxxxxxxxxxxxxxxx';
 $db_host = 'db.host.com';
 $db_port = '1234';
