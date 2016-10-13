@@ -1,5 +1,5 @@
 # Gofas WHMCS Autologin
-Auto Login compatível com WHMCS 7 e escolha de destino após o login configurado diretamente na tag do template de e-mail.
+Auto Login compatível com WHMCS7, escolha de destino após o login configurado diretamente na _merge tag_ do template de e-mail.
 Ideal para redirecionar o cliente diretamente para o Boleto gerado pelo módulo [Gofas Gerencianet Boleto para WHMCS](https://github.com/gofas/whmcs-gerencianet-boleto/).
 
 ## Instalação
