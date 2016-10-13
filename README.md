@@ -15,8 +15,13 @@ Ideal para redirecionar o cliente diretamente para o Boleto gerado pelo módulo 
 4) Adicione a mesma chave atribuída à `$secret_key` no arquivo auth.php (descrito no passo anterior) na [linha 10](https://github.com/gofas/whmcs-autologin/blob/master/includes/hooks/gofas_hash_email.php#L10) do arquivo `/includes/hooks/gofas_hash_email.php`. Exemplo: Se a sua `secret_key` é `abcdef123456`, a linha 10 do arquivo gofas_hash_email.php vai ficar assim:
 > 	$merge_fields['hash'] = md5('abcdef123456'); // chave igual à inserida no /auth.php
 
-5) Após concluir esses passos, ao adicionar a tag dinâmica `{hash}` a um template de email, ela será substituída por uma senha que será utilizada para identificar o usuário e conceder acesso à área do cliente do WHMCS após o login. Para gerar os URLs com o `hash`, adicione as tags seguindo a lógica do exemplo a seguir:
+5) Após concluir esses passos, ao adicionar a tag dinâmica `{hash}` a um template de email, ela será substituída por uma senha que será utilizada para identificar o usuário e conceder acesso à área do cliente do WHMCS após o login. Para gerar os URLs com o `hash`, adicione as tags seguindo a lógica dos exemplos a seguir:
 
 URL dinâmico para colar no template de email "Invoice Created" que leva o usuário para a visualização da fatura após o login:
 > {$whmcs_url}auth.php?email={$client_email}&hash={$hash}&whmcsurl={$whmcs_url}&goto=viewinvoice.php?id={$invoice_id}
 
+URL dinâmico que leva o usuário para a edição do perfil após o login:
+> {$whmcs_url}auth.php?email={$client_email}&hash={$hash}&whmcsurl={$whmcs_url}&goto=clientarea.php?action=details
+
+Exemplo de URL para que leva o usuário para a visualização de um ticket respondido após o login:
+> {$whmcs_url}auth.php?email={$client_email}&hash={$hash}&whmcsurl={$whmcs_url}&goto={$ticket_link}
