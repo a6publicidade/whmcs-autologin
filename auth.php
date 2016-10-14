@@ -15,11 +15,11 @@ $secret_key =  "xxxxxxxxxxxxxxxxxxxxx_secret_key_xxxxxxxxxxxxxxxxxxxxx"; // chav
 if (md5($_GET['email'].$_GET['uid'].$_GET['uname'].$secret_key) != $_GET['hash']){
 die();
 } 
-$email	= $_GET['email'];
-$timestamp = time();
-$goto      = $_GET["goto"];
-$hash      = sha1($email.$timestamp.$autoauthkey);
-$url       = $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
+$email		= $_GET['email'];
+$timestamp	= time();
+$goto		= $_GET["goto"];
+$hash		= sha1($email.$timestamp.$autoauthkey);
+$url		= $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
 header("Location: $url");
 exit;
 ?>
