@@ -8,8 +8,8 @@
  // Modelo de URL para colar no template de email:
 // {$whmcs_url}auth.php?email={$client_email}&uid={$client_id}&uname={$client_first_name} {$client_last_name}&hash={$hash}&whmcsurl={$whmcs_url}&goto=viewinvoice.php?id={$invoice_id}
 
-$autoauthkey = "xxxxxxxxxxxxxxxxxxxxx_autoauthkey_xxxxxxxxxxxxxxxxxxxxx"; // chave igual à inserida no arquivo /configuration.php
-$secret_key =  "xxxxxxxxxxxxxxxxxxxxx_secret_key_xxxxxxxxxxxxxxxxxxxxx"; // chave igual à inserida no arquivo /includes/hooks/gofas_hash_email.php
+$autoauthkey = "xxxxx_autoauthkey_xxxxx"; // chave igual à inserida no arquivo /configuration.php
+$secret_key =  "xxxxx_secret_key_xxxx"; // chave igual à inserida no arquivo /includes/hooks/gofas_hash_email.php
 $whmcsurl = $_GET["whmcsurl"].'dologin.php';
 if (md5($_GET['email'].$_GET['uid'].$_GET['uname'].$secret_key) != $_GET['hash']){
 die();
