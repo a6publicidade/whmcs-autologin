@@ -12,5 +12,5 @@ $cc_encryption_hash = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 $templates_compiledir = 'templates_c';
 $mysql_charset = 'utf8';
 date_default_timezone_set('America/Sao_Paulo');
-$autoauthkey = "xxxxxxxxxxxxxxxxxxxxx_autoauthkey_xxxxxxxxxxxxxxxxxxxxx"; // chave igual à inserida no /auth.php
+$autoauthkey = "xxxxx_autoauthkey_xxxxx"; // chave igual à inserida no /auth.php
 ?>
