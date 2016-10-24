@@ -18,7 +18,7 @@ function gofas_hash_email_template($vars) {
 	$getClientValues['stats']			= true;
 	$getClientValues['responsetype']	= 'json';
 	$getClientResults					= localAPI($getClient,$getClientValues,$whmcsAdmin);
-	$secret_key							= 'xxxxxxxxxxxxxxxxxxxxx_secret_key_xxxxxxxxxxxxxxxxxxxxx';
+	$secret_key							= 'xxxxx_secret_key_xxxx'; // chave igual à inserida no /auth.php
 	$merge_fields = array();
 	$merge_fields['hash']				= md5($getClientResults['client']['email'].$getClientResults['client']['id'].$getClientResults['client']['fullname'].$secret_key);
 	return $merge_fields;
