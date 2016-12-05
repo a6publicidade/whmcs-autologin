@@ -18,12 +18,12 @@ Ideal para redirecionar o cliente diretamente para o Boleto gerado pelo módulo 
 5) Após concluir esses passos, ao adicionar a tag dinâmica `{hash}` a um template de email, ela será substituída por uma senha que será utilizada para identificar o usuário e conceder acesso à área do cliente do WHMCS após o login. Para gerar os URLs com o `hash`, adicione as tags seguindo a lógica dos exemplos a seguir:
 
 URL dinâmico para colar no template de email "Invoice Created" que leva o usuário para a visualização da fatura após o login:
-> {$whmcs_url}auth.php?email={$client_email}&uid={$client_id}&uname={$client_first_name} {$client_last_name}&hash={$hash}&whmcsurl={$whmcs_url}&goto=viewinvoice.php?id={$invoice_id}
+> {$whmcs_url}auth.php?email={$client_email}&uid={$client_id}&uname={$client_first_name}{$client_last_name}&hash={$hash}&whmcsurl={$whmcs_url}&goto=viewinvoice.php?id={$invoice_id}
 
 URL dinâmico que leva o usuário para a edição do perfil após o login:
-> {$whmcs_url}auth.php?email={$client_email}&uid={$client_id}&uname={$client_first_name} {$client_last_name}&hash={$hash}&whmcsurl={$whmcs_url}&goto=clientarea.php?action=details
+> {$whmcs_url}auth.php?email={$client_email}&uid={$client_id}&uname={$client_first_name}{$client_last_name}&hash={$hash}&whmcsurl={$whmcs_url}&goto=clientarea.php?action=details
 
 Exemplo de URL para que leva o usuário para a visualização de um ticket respondido após o login:
-> {$whmcs_url}auth.php?email={$client_email}&uid={$client_id}&uname={$client_first_name} {$client_last_name}&hash={$hash}&whmcsurl={$whmcs_url}&goto={$ticket_link}
+> {$whmcs_url}auth.php?email={$client_email}&uid={$client_id}&uname={$client_first_name}{$client_last_name}&hash={$hash}&whmcsurl={$whmcs_url}&goto={$ticket_link}
 
 &copy;2016 [Gofas](https://gofas.net)
